@@ -1,3 +1,5 @@
+import type { User } from '@prisma/client';
+
 export const GET = ({ request }: { request: Request }) => {
     const authHeader = request.headers.get('Authorization');
 
