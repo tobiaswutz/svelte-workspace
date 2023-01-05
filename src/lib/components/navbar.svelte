@@ -3,6 +3,7 @@
   import { navigating } from "$app/stores"
   import toast from "svelte-french-toast"
   import { goto } from "$app/navigation"
+  
   import { page } from "$app/stores"
 
   const toggleDarkMode = () => {
