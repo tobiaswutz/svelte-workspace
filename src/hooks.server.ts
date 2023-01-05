@@ -1,9 +1,13 @@
 import SvelteKitAuth from "@auth/sveltekit"
 import GitHub from "@auth/core/providers/github"
+import Google from '@auth/core/providers/google'
 import { GITHUB_ID, GITHUB_SECRET } from "$env/static/private"
-
-console.log("GITHUB_ID", GITHUB_ID)
+import { GOOGLE_ID } from "$env/static/private"
+import { GOOGLE_SECRET } from "$env/static/private"
 
 export const handle = SvelteKitAuth({
-  providers: [GitHub({ clientId: GITHUB_ID, clientSecret: GITHUB_SECRET })],
+  providers: [
+    GitHub({ clientId: GITHUB_ID, clientSecret: GITHUB_SECRET }),
+    Google({ clientId: GOOGLE_ID, clientSecret: GOOGLE_SECRET }),
+  ],
 })

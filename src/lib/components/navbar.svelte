@@ -1,10 +1,21 @@
 <script lang="ts">
-  import { toggleDarkMode } from "$lib/stores/appsettings"
   import { darkmode } from "$lib/stores/appsettings"
   import { navigating } from "$app/stores"
   import toast from "svelte-french-toast"
   import { goto } from "$app/navigation"
   import { page } from "$app/stores"
+
+  const toggleDarkMode = () => {
+    if (document.documentElement.classList.contains('dark')) {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('dark', 'false');
+        darkmode.set(false);
+    } else {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('dark', 'true');
+        darkmode.set(true);
+    }
+  }
 
   const menuItems = [
     { name: "HOME", link: "/app" },

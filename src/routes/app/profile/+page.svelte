@@ -4,8 +4,8 @@
   import Button from "$lib/components/button.svelte"
   import toast from "svelte-french-toast"
   import { onMount } from "svelte"
-  import { get } from "svelte/store"
-  import { json } from "@sveltejs/kit"
+
+  console.log($page.data.session?.user)
 
   let users: any[] = []
 
