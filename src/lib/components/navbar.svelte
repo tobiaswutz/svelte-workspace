@@ -9,6 +9,7 @@
   const menuItems = [
     { name: "HOME", link: "/app" },
     { name: "BOARD", link: "/app/board" },
+    { name: "DRAW", link: "/app/draw" },
   ]
   $: if ($navigating) open = false
   let open = false
