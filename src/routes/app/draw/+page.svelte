@@ -47,16 +47,18 @@
       height: 300,
       borderColor: "transparent",
       borderRadius: 12,
+      targetPosition: "right",
+      sourcePosition: "left",
     },
   ]
   const initialEdges: Edge[] = [
-    { id: "e1-2", source: 1, target: 2, label: " YES ", labelBgColor: "transparent", labelTextColor: "yellow", animate: true },
-    { id: "e1-3", source: 1, target: 3, label: " NO ", labelBgColor: "transparent", labelTextColor: "yellow", animate: true },
-    { id: "e1-4", source: 1, target: 4, label: " MAYBE ", labelBgColor: "transparent", labelTextColor: "yellow", animate: true },
-    { id: "e2-4", source: 4, target: 5, label: " YES ", labelBgColor: "transparent", labelTextColor: "yellow", animate: true },
+    { id: "e1-2", source: 1, target: 2, label: " YES ", labelBgColor: "transparent", labelTextColor: "yellow" },
+    { id: "e1-3", source: 1, target: 3, label: " NO ", labelBgColor: "transparent", labelTextColor: "yellow" },
+    { id: "e1-4", source: 1, target: 4, label: " MAYBE ", labelBgColor: "transparent", labelTextColor: "yellow" },
+    { id: "e2-4", source: 4, target: 5, label: " YES ", labelBgColor: "transparent", labelTextColor: "yellow" },
   ]
 </script>
 
 <div class="overflow-hidden">
-  <Svelvet bgColor={"transparent"} width={window.innerWidth} height={window.innerHeight} nodes={initialNodes} edges={initialEdges} background />
+  <Svelvet bgColor={"transparent"} width={window.innerWidth} height={window.innerHeight} nodes={initialNodes} edges={initialEdges} nodeLink nodeCreate background />
 </div>
